@@ -300,12 +300,16 @@ typing-game/
 
 ### Frontend (Runtime)
 
+The libraries that power the game at runtime — each one lightweight, widely adopted, and well-suited to real-time 3D in the browser.
+
 - **React** `19` — Component model and state management
 - **Three.js** `0.183` — WebGL 3D renderer
 - **@react-three/fiber** `9` — React renderer for Three.js
 - **@react-three/drei** `10` — Helpers and abstractions for R3F (`Stars`, `Text`, …)
 
 ### Build & Tooling
+
+Everything used to develop, type-check, and bundle the project:
 
 - **Vite** `8` — Dev server and bundler with instant HMR
 - **TypeScript** `5.9` — Type safety and IntelliSense (`strict: true`)
