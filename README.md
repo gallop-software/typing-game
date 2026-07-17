@@ -339,7 +339,7 @@ Built with ❤️ by the team at [Gallop](https://gallop.software)
 
 ---
 
-## Learn More
+## Learn More.
 
 - [Gallop AI Editor](https://gallop.software/)
 - [Gallop Templates](https://gallop.software/templates)
