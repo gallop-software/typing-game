@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+/* Screens */
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  pointer-events: auto;
+}
+
+.start-screen {
+  background: radial-gradient(ellipse at center, rgba(0,0,16,0.7) 0%, rgba(0,0,16,0.95) 100%);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.title-line {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 20px #00aaff, 0 0 40px #0066ff, 0 0 80px #0033aa;
+  color: #aaddff;
+}
+
+.subtitle-line {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 20px #ff4400, 0 0 40px #ff2200, 0 0 80px #aa0000;
+  color: #ffaa88;
+  margin-top: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  letter-spacing: 0.5em;
+  color: #88ccff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #0088ff;
+}
+
+.instructions {
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 2;
+  color: #88aacc;
+  margin-bottom: 2rem;
+}
+
+.case-warning {
+  color: #ffcc44;
+  font-weight: 700;
+}
+
+.key-example {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 1.1em;
+  margin: 0 0.2em;
+}
+
+.key-example.lower {
+  border-color: #00ff88;
+  color: #00ff88;
+  text-shadow: 0 0 8px #00ff88;
+}
+
+.key-example.upper {
+  border-color: #ff4444;
+  color: #ff4444;
+  text-shadow: 0 0 8px #ff4444;
+}
+
+.prompt {
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  color: #ffffff;
+  text-shadow: 0 0 15px #ffffff;
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Game Over */
+.gameover-screen {
+  background: radial-gradient(ellipse at center, rgba(30,0,0,0.8) 0%, rgba(0,0,0,0.95) 100%);
+}
+
+.gameover-title {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000;
+  color: #ff4444;
+  margin-bottom: 2rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  margin-bottom: 3rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #668899;
+  margin-bottom: 0.3rem;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #aaddff;
+  text-shadow: 0 0 10px #0088ff;
+}
+
+/* HUD */
+.hud-top-right {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  text-align: right;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #aaddff;
+  text-shadow: 0 0 15px #0088ff, 0 0 30px #0044aa;
+  letter-spacing: 0.05em;
+}
+
+.combo {
+  font-size: 1rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffaa00;
+  letter-spacing: 0.15em;
+  margin-top: 0.3rem;
+  animation: comboFlash 0.2s ease-out;
+}
+
+@keyframes comboFlash {
+  0% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.hud-top-left {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.lives-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: #668899;
+  margin-bottom: 0.5rem;
+}
+
+.lives-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.shield-icon {
+  width: 20px;
+  height: 24px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: all 0.3s ease;
+}
+
+.shield-icon.active {
+  background: linear-gradient(180deg, #00ccff, #0066aa);
+  box-shadow: 0 0 10px #00aaff;
+}
+
+.shield-icon.depleted {
+  background: #1a2a3a;
+  opacity: 0.3;
+}
+
+.shield-icon.warning {
+  animation: shieldWarning 0.8s ease-in-out infinite;
+}
+
+@keyframes shieldWarning {
+  0%, 100% { background: linear-gradient(180deg, #00ccff, #0066aa); }
+  50% { background: linear-gradient(180deg, #ff4444, #aa0000); }
+}
+
+/* Crosshair */
+.crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0, 170, 255, 0.3);
+  border-radius: 50%;
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 170, 255, 0.4);
+}
+
+.crosshair::before {
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+.crosshair::after {
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+}

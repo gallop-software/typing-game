@@ -1,0 +1,3 @@
+{
+  "ignoreDependencies": ["prettier", "prettier-plugin-organize-imports"]
+}

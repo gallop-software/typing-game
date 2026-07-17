@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000010;
+  color: white;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Remove default focus outlines during gameplay */
+*:focus {
+  outline: none;
+}
