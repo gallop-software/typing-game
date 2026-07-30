@@ -3,6 +3,7 @@
 A best-in-class TypeScript starter for shipping high-quality 3D browser games — built on React, React Three Fiber, and Three.js — so you can build at the speed of thought with AI, ship a polished game, and rank #1 on Google.
 
 **⚡ Demo:** [typing-game.gallop.software](https://typing-game.gallop.software)
+**☁️ Cloudflare Demo:** [typing-game-cloudflare.gallop.software](https://typing-game-cloudflare.gallop.software)
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)
 **📦 Repository:** [github.com/gallop-software/typing-game](https://github.com/gallop-software/typing-game)
 **🏷️ Category:** 3D Typing Game
@@ -304,7 +305,7 @@ The AI will walk you through every step. When you're done, your game will be liv
 
 ### Deploy to Cloudflare Workers
 
-Typing Game builds to plain static files, which Cloudflare Workers serves directly through its [static assets](https://developers.cloudflare.com/workers/static-assets/) support — no adapter, no server runtime, no environment variables to manage.
+Typing Game builds to plain static files, which Cloudflare Workers serves directly through its [static assets](https://developers.cloudflare.com/workers/static-assets/) support — no adapter, no server runtime, no environment variables to manage. See it live: **[typing-game-cloudflare.gallop.software](https://typing-game-cloudflare.gallop.software)** — the same template, deployed exactly the way this section describes.
 
 **Step 1 — Connect Cloudflare in the Publish view** (`Cmd+6`). Once saved, the editor puts your Cloudflare credentials (`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`) into the terminal environment and makes them available to the AI chat. Wrangler reads those variables automatically, which means **nobody has to run `npx wrangler login`, and no token is ever pasted into a file.**
 
