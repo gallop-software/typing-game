@@ -1,5 +1,7 @@
 # Typing Game
 
+[![Typing Game](public/screenshot.jpg)](https://typing-game.gallop.software)
+
 A best-in-class TypeScript starter for shipping high-quality 3D browser games — built on React, React Three Fiber, and Three.js — so you can build at the speed of thought with AI, ship a polished game, and rank #1 on Google.
 
 **⚡ Demo:** [typing-game.gallop.software](https://typing-game.gallop.software)
